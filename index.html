@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARCTIC ESPORTS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {margin:0;padding:0;box-sizing:border-box;}
+        body {font-family:'Montserrat',sans-serif; background:#000; color:#fff; line-height:1.6; overflow-x:hidden;}
+        a {color:#00ffff;text-decoration:none;} a:hover {color:#00bfff;}
+        nav {position:fixed; top:0;width:100%;background:rgba(0,0,0,0.8);backdrop-filter:blur(10px);z-index:1000;padding:1rem;display:flex;justify-content:space-between;align-items:center;}
+        nav .logo {font-size:1.5rem;font-weight:900;color:#00ffff;}
+        nav ul {list-style:none; display:flex; gap:2rem;}
+        nav ul li a {font-weight:700; transition: color 0.3s;}
+        @media(max-width:768px){nav ul{display:none;}}
+        #hero {height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:linear-gradient(135deg,#000,#001122);position:relative;}
+        #hero .logo {font-size:4rem;font-weight:900;color:#00ffff;margin-bottom:2rem;animation:fadeIn 2s ease-in-out;}
+        @keyframes fadeIn {from{opacity:0;} to{opacity:1;}}
+        #hero .buttons {display:flex;gap:1rem;flex-wrap:wrap;}
+        #hero button {background:rgba(0,255,255,0.2);backdrop-filter:blur(10px);border:1px solid #00ffff;color:#00ffff;padding:1rem 2rem;font-size:1.2rem;font-weight:700;cursor:pointer;transition:all 0.3s;border-radius:10px;}
+        #hero button:hover {background:rgba(0,255,255,0.5);transform:scale(1.05);}
+        section {padding:4rem 2rem;min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;}
+        section h2 {font-size:2.5rem;font-weight:900;color:#00ffff;margin-bottom:2rem;text-align:center;}
+        .card {background:rgba(255,255,255,0.1);backdrop-filter:blur(10px);border:1px solid rgba(0,255,255,0.3);border-radius:15px;padding:2rem;margin:1rem;max-width:600px;width:100%;text-align:center;}
+        #team .team-members {display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2rem;width:100%;max-width:1200px;}
+        .member {background:rgba(255,255,255,0.1);backdrop-filter:blur(10px);border:1px solid rgba(0,255,255,0.3);border-radius:15px;padding:1.5rem;text-align:center;}
+        .member img {width:100px;height:100px;border-radius:50%;margin-bottom:1rem;background:#ccc;}
+        #gallery .gallery-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;width:100%;max-width:1200px;}
+        .gallery-item img {width:100%;height:200px;object-fit:cover;border-radius:10px;background:#ccc;}
+        #apply form {display:flex;flex-direction:column;gap:1rem;width:100%;max-width:600px;}
+        #apply input,#apply select,#apply textarea {padding:1rem;border:1px solid #00ffff;background:rgba(255,255,255,0.1);backdrop-filter:blur(10px);border-radius:10px;color:#fff;font-family:'Montserrat',sans-serif;}
+        #apply button {background:#00ffff;color:#000;padding:1rem;border:none;border-radius:10px;font-weight:700;cursor:pointer;transition:background 0.3s;}
+        #apply button:hover {background:#00bfff;}
+        #contact .contact-info {display:flex;flex-direction:column;gap:1rem;align-items:center;}
+        #contact iframe {width:100%;max-width:560px;height:315px;border-radius:10px;}
+        #whatsapp-float {position:fixed;bottom:2rem;right:2rem;background:#25d366;color:#fff;border-radius:50%;width:60px;height:60px;display:flex;justify-content:center;align-items:center;font-size:1.5rem;cursor:pointer;box-shadow:0 4px 8px rgba(0,0,0,0.3);z-index:1000;}
+        #whatsapp-float:hover {background:#128c7e;}
+        @media(max-width:768px){#hero .logo{font-size:2.5rem;}section{padding:2rem 1rem;}nav ul{flex-direction:column;gap:1rem;}}
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">ARCTIC ESPORTS</div>
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#gallery">Highlights / Gallery</a></li>
+            <li><a href="#apply">Apply Now</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="hero">
+        <div class="logo">ARCTIC ESPORTS</div>
+        <div class="buttons">
+            <button onclick="scrollToSection('team')">Join Arctic Esports</button>
+            <button onclick="scrollToSection('gallery')">Watch Highlights</button>
+            <button onclick="scrollToSection('apply')">Apply Now</button>
+        </div>
+    </section>
+
+    <section id="team">
+        <h2>Our Team</h2>
+        <div class="card">
+            <p>Founded by Umer Takildar, ARCTIC ESPORTS has been competing for 2.5 years. In collaboration with UA7 Esports.</p>
+        </div>
+        <div class="team-members">
+          <div class="member">
+            <img src="images/igl.jpg" alt="Umer - IGL">
+            <h3>Toxi
+            </h3>
+            <p>IGL — In Game Leader</p>
+          </div>
+          <div class="member">
+            <img src="images/entry.jpg" alt="RAMBO - Entry Fragger">
+            <h3>RAMBO</h3>
+            <p>Entry Fragger — First Entry</p>
+          </div>
+          <div class="member">
+            <img src="images/supporter.jpg" alt="RUPU - Supporter">
+            <h3>RUPU</h3>
+            <p>Supporter — Support Role</p>
+          </div>
+          <div class="member">
+            <img src="images/assaulter.jpg" alt="Dheeraj - Assaulter">
+            <h3>Dheeraj</h3>
+            <p>Assaulter — Aggressive Role</p>
+          </div>
+          <div class="member">
+            <img src="images/fragger.jpg" alt="NANCY - Fragger">
+            <h3>NANCY</h3>
+            <p>Fragger — Damage Dealer</p>
+          </div>
+        </div>
+    </section>
+
+ <section id="gallery">
+    <h2>Highlights / Gallery</h2>
+    <div class="gallery-grid">
+        <div class="gallery-item"><img src="https://via.placeholder.com/300x200" alt="Highlight 1"></div>
+        <div class="gallery-item"><img src="https://via.placeholder.com/300x200" alt="Highlight 2"></div>
+        <div class="gallery-item"><img src="https://via.placeholder.com/300x200" alt="Highlight 3"></div>
+        <div class="gallery-item"><img src="https://via.placeholder.com/300x200" alt="Highlight 4"></div>
+    </div>
+</section>
+
+    <section id="apply">
+        <h2>Apply Now</h2>
+        <form id="application-form">
+            <input type="text" name="id" placeholder="ID Number" required>
+            <input type="text" name="ign" placeholder="IGN" required>
+            <textarea name="description" placeholder="Description" rows="4" required></textarea>
+            <select name="role" required>
+                <option value="">Select Your Role</option>
+                <option value="IGL">IGL</option>
+                <option value="Supporter">Supporter</option>
+                <option value="Fragger">Fragger</option>
+                <option value="Assaulter">Assaulter</option>
+                <option value="Entry Fragger">Entry Fragger</option>
+            </select>
+            <input type="text" name="experience" placeholder="Experience" required>
+            <button type="submit">Submit Application</button>
+        </form>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+            <p>WhatsApp: <a href="https://wa.me/7385009275">7385009275</a></p>
+            <p>Instagram: <a href="https://instagram.com/arcticesports7">@arcticesports7</a></p>
+            <p>YouTube: <a href="https://youtube.com/c/ARCTIC ESPORTS">ARCTIC ESPORTS</a></p>
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <div id="whatsapp-float" onclick="window.open('https://wa.me/7385009275', '_blank')">
+        💬
+    </div>
+
+    <script>
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+        document.getElementById('application-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Application submitted! We will get back to you soon.');
+        });
+    </script>
+</body>
+</html>
